@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BindingContext="{Binding ExpandListView,Source={StaticResource Locator}}"
+             Title="ExpandedListView"
+             x:Name="ExpandedListViewPage"
+             x:Class="BasicXamarinApp.Views.ExpandedListView">
+    <ContentPage.Content>
+        <StackLayout>
+            <ListView ItemsSource="{Binding Items}" SelectionMode="None" HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout>
+                                <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+                                    <Label HorizontalOptions="StartAndExpand" Text="{Binding Name}" TextColor="Black" HorizontalTextAlignment="Center"/>
+                                    <Image Source="{Binding Active,Converter={StaticResource ExpandListViewConverter}}" WidthRequest="25" Aspect="AspectFit" HorizontalOptions="End">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding BindingContext.ActiveItemCommand,Source={x:Reference Name=ExpandedListViewPage}}" CommandParameter="{Binding ID}"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </StackLayout>
+                                <Button Text="Delete" Command="{Binding BindingContext.DeleteItemCommand,Source={x:Reference Name=ExpandedListViewPage}}" CommandParameter="{Binding .}" IsVisible="{Binding Active,Converter={StaticResource ExpandListViewButtonConverter}}" HorizontalOptions="Center" WidthRequest="80" HeightRequest="35"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
