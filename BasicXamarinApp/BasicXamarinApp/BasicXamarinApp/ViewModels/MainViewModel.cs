@@ -28,7 +28,7 @@ namespace BasicXamarinApp.ViewModels
                 case "0": await App.Current.MainPage.Navigation.PushAsync(new ExpandedListView(), true);
                     break;
                 case "1":
-                    await App.Current.MainPage.Navigation.PushAsync(new ExpandedListView(), true);
+                    await App.Current.MainPage.Navigation.PushAsync(new StyleAndCustomFontView(), true);
                     break;
                 case "2":
                     await App.Current.MainPage.Navigation.PushAsync(new ExpandedListView(), true);

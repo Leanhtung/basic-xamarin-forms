@@ -34,5 +34,11 @@
     <string>BasicXamarinApp</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
+  <key>UIAppFonts</key>
+  <array>
+    <string>UTMAvo.ttf</string>
+    <string>UTMAvoBold.ttf</string>
+    <string>ARDESTINE.ttf</string>
+  </array>
 </dict>
 </plist>

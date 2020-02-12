@@ -12,6 +12,26 @@
             <vm:ViewModelLocator x:Key="Locator"/>
             <converter:ExpandListViewConverter x:Key="ExpandListViewConverter"/>
             <converter:ExpandListViewButtonConverter x:Key="ExpandListViewButtonConverter"/>
+            
+            <Style TargetType="Label" x:Key="StyleLabel">
+                <Setter Property="TextColor" Value="Red"/>
+                <Setter Property="FontSize" Value="Default"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+                
+            </Style>
+
+            <OnPlatform x:Key="Avo"
+                        x:TypeArguments="x:String"
+                        iOS="UTMAvo"
+                        Android="UTMAvo.ttf#UTM Avo"/>
+            <OnPlatform x:Key="AvoBold"
+                        x:TypeArguments="x:String"
+                        iOS="UTMAvoBold"
+                        Android="UTMAvoBold.ttf#UTM Avo"/>
+            <OnPlatform x:Key="ARDESTINE"
+                        x:TypeArguments="x:String"
+                        iOS="ARDESTINE"
+                        Android="ARDESTINE.ttf#AR DESTINE"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

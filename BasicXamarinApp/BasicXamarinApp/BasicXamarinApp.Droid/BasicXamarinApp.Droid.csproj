@@ -62,6 +62,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\ARDESTINE.ttf" />
+    <AndroidAsset Include="Assets\UTMAvo.ttf" />
+    <AndroidAsset Include="Assets\UTMAvoBold.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
