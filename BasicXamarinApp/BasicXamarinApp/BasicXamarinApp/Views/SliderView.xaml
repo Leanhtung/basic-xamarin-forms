@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Slider"
+             BindingContext="{Binding Slider,Source={StaticResource Locator}}"
+             xmlns:slider="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             x:Class="BasicXamarinApp.Views.SliderView">
+    <ContentPage.Content>
+        <StackLayout>
+            <slider:CarouselViewControl x:Name="mainSlider" ItemsSource="{Binding Sliders}" HeightRequest="200" BackgroundColor="Blue" ShowIndicators="True" CurrentPageIndicatorTintColor="Red" IndicatorsTintColor="#ffedcd"  AnimateTransition="True"
+                                                            VerticalOptions="Start" HorizontalOptions="FillAndExpand">
+                <slider:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout VerticalOptions="Fill" Padding="0">
+                            <Image Source="{Binding Uri}" Aspect="AspectFill" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </DataTemplate>
+                </slider:CarouselViewControl.ItemTemplate>
+            </slider:CarouselViewControl>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

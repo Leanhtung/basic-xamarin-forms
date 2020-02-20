@@ -9,8 +9,10 @@
     <ContentPage.Content>
         <StackLayout>
             <Image Source="logo.png" HorizontalOptions="Center" WidthRequest="150" HeightRequest="150" VerticalOptions="Start"/>
-            <Button Text="ExpandedListView" Command="{Binding ExpandedListViewCommand}" FontFamily="{StaticResource Avo}" CommandParameter="0" BorderColor="#165760" TextColor="#165760" BackgroundColor="White" BorderWidth="2" CornerRadius="0" Margin="5" HeightRequest="40" HorizontalOptions="FillAndExpand"/>
-            <Button Text="Style And Custom Font" Command="{Binding ExpandedListViewCommand}" FontFamily="{StaticResource Avo}" CommandParameter="1" BorderColor="#165760" TextColor="#165760" BackgroundColor="White" BorderWidth="2" CornerRadius="0" Margin="5" HeightRequest="40" HorizontalOptions="FillAndExpand"/>
+            <Button Text="ExpandedListView" Command="{Binding NextPageCommand}" FontFamily="{StaticResource Avo}" CommandParameter="0" BorderColor="#165760" TextColor="#165760" BackgroundColor="White" BorderWidth="2" CornerRadius="0" Margin="5" HeightRequest="40" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Style And Custom Font" Command="{Binding NextPageCommand}" FontFamily="{StaticResource Avo}" CommandParameter="1" BorderColor="#165760" TextColor="#165760" BackgroundColor="White" BorderWidth="2" CornerRadius="0" Margin="5" HeightRequest="40" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Alert And Popup" Command="{Binding NextPageCommand}" FontFamily="{StaticResource Avo}" CommandParameter="2" BorderColor="#165760" TextColor="#165760" BackgroundColor="White" BorderWidth="2" CornerRadius="0" Margin="5" HeightRequest="40" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Slider" Command="{Binding NextPageCommand}" FontFamily="{StaticResource Avo}" CommandParameter="3" BorderColor="#165760" TextColor="#165760" BackgroundColor="White" BorderWidth="2" CornerRadius="0" Margin="5" HeightRequest="40" HorizontalOptions="FillAndExpand"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

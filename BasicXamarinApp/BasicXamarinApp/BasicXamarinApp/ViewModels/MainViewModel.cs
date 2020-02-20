@@ -14,11 +14,11 @@ namespace BasicXamarinApp.ViewModels
     }
     public class MainViewModel : BaseViewModel, IMainViewModel
     {
-        public ICommand ExpandedListViewCommand { get; set; }
+        public ICommand NextPageCommand { get; set; }
         [Preserve]
         public MainViewModel()
         {
-            ExpandedListViewCommand = new Command<string>(NextPage);
+            NextPageCommand = new Command<string>(NextPage);
         }
 
         public async void NextPage(string param)
@@ -31,10 +31,10 @@ namespace BasicXamarinApp.ViewModels
                     await App.Current.MainPage.Navigation.PushAsync(new StyleAndCustomFontView(), true);
                     break;
                 case "2":
-                    await App.Current.MainPage.Navigation.PushAsync(new ExpandedListView(), true);
+                    await App.Current.MainPage.Navigation.PushAsync(new AlertAndPopup(), true);
                     break;
                 case "3":
-                    await App.Current.MainPage.Navigation.PushAsync(new ExpandedListView(), true);
+                    await App.Current.MainPage.Navigation.PushAsync(new SliderView(), true);
                     break;
 
             }

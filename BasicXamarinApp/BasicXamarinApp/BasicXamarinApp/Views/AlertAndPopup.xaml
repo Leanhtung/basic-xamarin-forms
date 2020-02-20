@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Alert And Popup"
+             x:Class="BasicXamarinApp.Views.AlertAndPopup">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+                <Button Text="Popup" x:Name="btnPopup" Clicked="btnPopup_Clicked" FontFamily="{StaticResource Avo}" CommandParameter="0" BorderColor="#165760" TextColor="#165760" BackgroundColor="White" BorderWidth="2" CornerRadius="0" Margin="5" HeightRequest="40" HorizontalOptions="FillAndExpand"/>
+                <Button Text="Alert" x:Name="btnAlert" Clicked="btnAlert_Clicked" FontFamily="{StaticResource Avo}" CommandParameter="0" BorderColor="#165760" TextColor="#165760" BackgroundColor="White" BorderWidth="2" CornerRadius="0" Margin="5" HeightRequest="40" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <StackLayout x:Name="popupDemo" BackgroundColor="#A0000000" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" IsVisible="False">
+                <Grid HorizontalOptions="CenterAndExpand" Margin="0,20,0,0" VerticalOptions="Center" >
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="200"/>
+                        <RowDefinition Height="80"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="350"/>
+                    </Grid.ColumnDefinitions>
+                    <ContentView Grid.Column="0" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Fill" BackgroundColor="#165760">
+                        <StackLayout HorizontalOptions="Center">
+                            <Label Text="Header Popup" TextColor="White" BackgroundColor="#165760" HeightRequest="50" WidthRequest="350" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                            <Entry Placeholder="Demo 1" PlaceholderColor="White"/>
+                            <Entry Placeholder="Demo 2" PlaceholderColor="White"/>
+                            <Button Text="Ok" FontFamily="{StaticResource Avo}" BorderColor="LightGray" TextColor="#165760" BackgroundColor="White" BorderWidth="2" CornerRadius="0" Margin="5" HeightRequest="40" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </ContentView>
+                    <ContentView Grid.Column="0" Grid.Row="1">
+                        <Image Source="close.png" x:Name="CloseBtn" >
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </Image.GestureRecognizers>
+                        </Image>
+                    </ContentView>
+                </Grid>
+            </StackLayout>
+            <StackLayout x:Name="AlertDemo" BackgroundColor="#A0000000" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" IsVisible="False">
+                <Grid HorizontalOptions="CenterAndExpand" Margin="0,20,0,0" VerticalOptions="Center" >
+                    <Grid.RowDefinitions >
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="350"/>
+                    </Grid.ColumnDefinitions>
+                    <ContentView Grid.Column="0" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Fill" BackgroundColor="#165760">
+                        <StackLayout HorizontalOptions="Center">
+                            <Label Text="Header Alert" TextColor="White" BackgroundColor="#165760" HeightRequest="50" WidthRequest="350" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                            <Label Margin="5" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut dolor vel ligula ornare consequat eu eleifend tortor. Quisque luctus congue est, sit amet suscipit nulla volutpat id. Aliquam sapien dolor, ultrices id magna a, venenatis hendrerit ante. Duis eget vulputate sapien. Donec sagittis quam vitae elit malesuada bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam interdum, justo et suscipit tempor, ipsum turpis gravida magna, eget tincidunt tellus neque nec lectus. Nam tristique nulla at ex aliquam, eget viverra ipsum porttitor." TextColor="White" LineBreakMode="WordWrap" FontFamily="{StaticResource Avo}"/>
+                            <Button Text="Ok" Clicked="Button_Clicked" FontFamily="{StaticResource Avo}" BorderColor="LightGray" TextColor="#165760" BackgroundColor="White" BorderWidth="2" CornerRadius="0" Margin="5" HeightRequest="40" HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </ContentView>
+                    
+                </Grid>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

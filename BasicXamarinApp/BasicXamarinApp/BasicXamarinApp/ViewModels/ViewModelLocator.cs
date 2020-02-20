@@ -16,10 +16,14 @@ namespace BasicXamarinApp.ViewModels
             ContainerBuilder builder = new ContainerBuilder();
             builder.RegisterType<MainViewModel>().As<IMainViewModel>().SingleInstance();
             builder.RegisterType<ExpandedListViewModel>().As<IExpandedListViewModel>().SingleInstance();
+            builder.RegisterType<SliderViewModel>().As<ISliderViewModel>().SingleInstance();
 
             _container = builder.Build();
         }
-
+        public ISliderViewModel Slider
+        {
+            get { return _container.Resolve<ISliderViewModel>(); }
+        }
         public IMainViewModel Main
         {
             get
