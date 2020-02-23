@@ -16,8 +16,9 @@
                         iOS="UTMAvoBold"
                         Android="UTMAvoBold.ttf#UTM Avo"/>
             <Color x:Key="TextColor">#323131</Color>
-            <Color x:Key="BgColor">#efefef</Color>
+            <Color x:Key="BgColor">#f7f7f7</Color>
             <Color x:Key="AccentColor">#90bc1b</Color>
+            <Color x:Key="DarkAccentColor">#7ea710</Color>
             <Color x:Key="MainColor">#fc6353</Color>
             <Style TargetType="Label" x:Key="LabelDefaultStyle">
                 <Setter Property="FontFamily" Value="{StaticResource Avo}"/>

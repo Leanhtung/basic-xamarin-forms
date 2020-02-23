@@ -10,17 +10,12 @@ using Xamarin.Forms.Xaml;
 namespace OrderFoodAppUI.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomeView : ContentPage
+    public partial class ProducDetail : ContentPage
     {
-        public HomeView()
+        public ProducDetail()
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
-        }
-
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
-            App.Current.MainPage.Navigation.PushAsync(new ProducDetail(), true);
         }
     }
 }

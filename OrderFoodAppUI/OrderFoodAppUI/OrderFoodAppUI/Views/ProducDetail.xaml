@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="{StaticResource BgColor}"
+             x:Class="OrderFoodAppUI.Views.ProducDetail">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="20,0,20,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="back.png" Grid.Column="0" Aspect="AspectFit" HeightRequest="27" WidthRequest="27" VerticalOptions="Center" HorizontalOptions="Start"/>
+                <Label Style="{StaticResource LabelTitleStyle}" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Product Detail"/>
+                <Image Source="cart.png" Grid.Column="2" Aspect="AspectFit" HeightRequest="27" WidthRequest="27" VerticalOptions="Center" HorizontalOptions="Start"/>
+            </Grid>
+            <Image Source="https://happybellyfish.com/wp-content/uploads/2017/09/fermented_foods_from_all_over_the_world-1200x500.jpg" Aspect="AspectFill" HeightRequest="225" HorizontalOptions="FillAndExpand" Grid.Row="1"/>
+            <StackLayout Grid.Row="2">
+                <Label Text="Product Name" Style="{StaticResource LabelWellcomeStyle}" HorizontalTextAlignment="Center"/>
+                <Label Text="Product Description info" Style="{StaticResource LabelTitleStyle}" TextColor="Gray" HorizontalTextAlignment="Center"/>
+                <Label Text="30.000 đ/KG" Style="{StaticResource LabelTitleStyle}"  HorizontalTextAlignment="Center"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Label Margin="5" Text="1.KG" VerticalTextAlignment="Center" TextColor="Gray" Style="{StaticResource LabelTitleStyle}" HorizontalOptions="Start" HorizontalTextAlignment="Start"/>
+                    <Frame Margin="5" HorizontalOptions="Center" Padding="0" VerticalOptions="Center" HasShadow="False" CornerRadius="10" HeightRequest="20" WidthRequest="20" BackgroundColor="{StaticResource MainColor}" IsClippedToBounds="True">
+                        
+                    </Frame>
+                    <Label Margin="5" Text="50 KCAL" VerticalTextAlignment="Center" TextColor="Gray" Style="{StaticResource LabelTitleStyle}" HorizontalOptions="End" HorizontalTextAlignment="Start"/>
+                </StackLayout>
+            </StackLayout>
+            <Frame Grid.Row="3" Padding="15" CornerRadius="15" IsClippedToBounds="True" Margin="20,0,20,50" BackgroundColor="White">
+                <StackLayout>
+                    <Label Text="Weight" Style="{StaticResource LabelTitleStyle}"/>
+                    <Entry Placeholder="1.0 kg" PlaceholderColor="Gray"/>
+                    <Label Text="Special Requests" Style="{StaticResource LabelTitleStyle}"/>
+                    <Entry Placeholder="Add comment (eg extra sauce, no onion)" PlaceholderColor="Gray"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout Grid.Row="4" >
+                <StackLayout  Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    <Image Source="minus.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="Start"/>
+                    <Label Text="1" Style="{StaticResource LabelWellcomeStyle}" HorizontalOptions="Center"/>
+                    <Image Source="plus.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="End"/>
+                </StackLayout>
+                <Button BackgroundColor="{StaticResource MainColor}" CornerRadius="25" FontFamily="{StaticResource Avo}" FontSize="17" HeightRequest="50" WidthRequest="200" Text="Add to cart" TextColor="White" HorizontalOptions="Center"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -2,5 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectView>ShowAllFiles</ProjectView>
+    <SelectedDevice>iPhone 7 iOS 11.0</SelectedDevice>
+    <DefaultDevice>iPhone 7 iOS 11.0</DefaultDevice>
   </PropertyGroup>
 </Project>
