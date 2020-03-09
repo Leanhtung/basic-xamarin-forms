@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace OrderFoodAppUI.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PersonalView : ContentPage
+    public partial class CartView : ContentPage
     {
-        public PersonalView()
+        public CartView()
         {
             NavigationPage.SetHasNavigationBar(this, false);
             InitializeComponent();
@@ -20,7 +20,7 @@ namespace OrderFoodAppUI.Views
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            App.Current.MainPage.Navigation.PushAsync(new LoginView(), true);
+            App.Current.MainPage.Navigation.PopAsync(true);
         }
     }
 }

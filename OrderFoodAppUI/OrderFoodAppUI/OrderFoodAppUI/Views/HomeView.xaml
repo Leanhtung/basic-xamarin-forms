@@ -12,7 +12,11 @@
             <StackLayout>
                 <AbsoluteLayout HeightRequest="50" Margin="20,0,20,0" HorizontalOptions="FillAndExpand">
                     <Label AbsoluteLayout.LayoutBounds="0,0,1,1" Style="{StaticResource LabelTitleStyle}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" AbsoluteLayout.LayoutFlags="All" Text="Les's Start"/>
-                    <Image Source="cart.png" AbsoluteLayout.LayoutBounds="1,0.5,20,20" AbsoluteLayout.LayoutFlags="YProportional,XProportional"/>
+                    <Image Source="cart.png" AbsoluteLayout.LayoutBounds="1,0.5,30,30" AbsoluteLayout.LayoutFlags="YProportional,XProportional">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                        </Image.GestureRecognizers>
+                    </Image>
                 </AbsoluteLayout>
                 <StackLayout Margin="20,0,20,0">
                     <Label Text="Hi Tung!" Style="{StaticResource LabelWellcomeStyle}"/>

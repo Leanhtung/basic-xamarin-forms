@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BackgroundColor="{StaticResource BgColor}"
+             xmlns:controls="clr-namespace:OrderFoodAppUI.Controls"
+             x:Class="OrderFoodAppUI.Views.LoginView">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="20,0,20,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="30"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="back.png" Grid.Column="0" Aspect="AspectFit" HeightRequest="27" WidthRequest="27" VerticalOptions="Center" HorizontalOptions="Start">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Style="{StaticResource LabelTitleStyle}" Grid.Column="1" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Text="Shopping Cart"/>
+                <Image Source="cart.png" Grid.Column="2" Aspect="AspectFit" HeightRequest="27" WidthRequest="27" VerticalOptions="Center" HorizontalOptions="Start"/>
+            </Grid>
+            <Image Source="logo.png"  Margin="20,20,20,0" Aspect="AspectFit" WidthRequest="200" Grid.Row="1" VerticalOptions="Start" HorizontalOptions="Center"/>
+            <Frame HasShadow="True" Grid.Row="2" IsClippedToBounds="True" Margin="20,20,20,0" HeightRequest="60" CornerRadius="30" Padding="0">
+                <controls:CustomEntry Placeholder="Account/ Email" BorderColor="White" BackgroundColor="White" FontFamily="{StaticResource Avo}" FontSize="15" TextColor="{StaticResource TextColor}" HeightRequest="60" Image="mail" ImageAlignment="Left" ImageWidth="15" ImageHeight="15" CornerRadius="30" IsCurvedCornersEnabled="True"/>
+            </Frame>
+            <Frame HasShadow="True" Grid.Row="3" IsClippedToBounds="True" Margin="20,20,20,0" HeightRequest="60" CornerRadius="30" Padding="0">
+                <controls:CustomEntry Placeholder="Password" BorderColor="White" BackgroundColor="White" IsPassword="True" FontFamily="{StaticResource Avo}" FontSize="15" TextColor="{StaticResource TextColor}" HeightRequest="60" Image="lock" ImageAlignment="Left" ImageWidth="15" ImageHeight="15" CornerRadius="30" IsCurvedCornersEnabled="True"/>
+            </Frame>
+            <Frame HasShadow="True" Grid.Row="4" IsClippedToBounds="True" Margin="20,60,20,0" HeightRequest="60" CornerRadius="30" Padding="0">
+                <Button Text="Login" FontFamily="{StaticResource Avo}" FontSize="18" TextColor="White" BackgroundColor="{StaticResource MainColor}"/>
+            </Frame>
+            <Frame HasShadow="True" Grid.Row="5" IsClippedToBounds="True" Margin="20,20,20,0" HeightRequest="60" CornerRadius="30" Padding="0">
+                <Button Text="Register" FontFamily="{StaticResource Avo}" FontSize="18" TextColor="White"  BackgroundColor="{StaticResource AccentColor}"/>
+            </Frame>
+            <Label Style="{StaticResource LabelTitleStyle}" Grid.Row="6" VerticalTextAlignment="Center" TextColor="Gray" HorizontalTextAlignment="Center" Text="Forgot your password!"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

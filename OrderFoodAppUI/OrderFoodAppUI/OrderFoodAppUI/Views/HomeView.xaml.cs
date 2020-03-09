@@ -22,5 +22,10 @@ namespace OrderFoodAppUI.Views
         {
             App.Current.MainPage.Navigation.PushAsync(new ProducDetail(), true);
         }
+
+        private void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        {
+            App.Current.MainPage.Navigation.PushAsync(new CartView(), true);
+        }
     }
 }
